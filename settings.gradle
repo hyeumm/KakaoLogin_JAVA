@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/'
+            allowInsecureProtocol true
+        }
+    }
+}
+rootProject.name = "KakaoLogin"
+include ':app'
