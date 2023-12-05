@@ -22,19 +22,14 @@ public class SubActivity extends AppCompatActivity {
         //initShareButton();
 
         Intent intent=getIntent();
-        strNick=intent.getStringExtra("name");
         strEmail=intent.getStringExtra("email");
 
-        TextView tv_nick=findViewById(R.id.tv_nickname);
         TextView tv_email=findViewById(R.id.tv_email);
 
-        //닉네임 셋
-        tv_nick.setText(strNick);
         //이메일 셋
         tv_email.setText(strEmail);
 
     }
-    /**
     private void initShareButton() {
         final AppCompatButton shareButton = findViewById(R.id.btnShare);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -51,5 +46,5 @@ public class SubActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(shareIntent, null));
             }
         });
-    }*/
+    }
 }

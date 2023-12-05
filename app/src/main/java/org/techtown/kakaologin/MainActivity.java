@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(MeV2Response result) { //로그인 성공
                         Intent intent = new Intent(MainActivity.this, SubActivity.class);
-                        intent.putExtra("Nickname", result.getKakaoAccount().getProfile().getNickname());
                         intent.putExtra("email", result.getKakaoAccount().getEmail());
                         startActivity(intent);
                         Toast.makeText(MainActivity.this, "로그인에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
